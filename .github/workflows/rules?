@@ -1,6 +1,4 @@
-git remote add origin https://github.com/greenteagarlicbread/niggasexamongus.git
-git branch -M main
-git push -u origin main
+
 # This is a basic workflow to help you get started with Actions
 {
   "name": "rules",
