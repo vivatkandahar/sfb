@@ -1,0 +1,53 @@
+git remote add origin https://github.com/greenteagarlicbread/niggasexamongus.git
+git branch -M main
+git push -u origin main
+# This is a basic workflow to help you get started with Actions
+{
+  "name": "rules",
+  "type": 1,
+  "channel_id": "1135207452237893744",
+  "token": "3d89bb7572e0fb30d8128367b3b1b44fecd1726de135cbe28a41f8b2f777c372ba2939e72279b94526ff5d1bd4358d65cf11",
+  "avatar": null,
+  "guild_id": "199737254929760256",
+  "id": "223704706495545344",
+  "application_id": null,
+  "user": {
+    "username": "test",
+    "discriminator": "7479",
+    "id": "190320984123768832",
+    "avatar": "b004ec1740a63ca06ae2e14c5cee11f3",
+    "public_flags": 131328
+  }
+}
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
